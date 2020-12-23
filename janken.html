@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん</title>
+    <link rel="stylesheet" href="css/janken.css">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ result }}<br>
+            <img :src="resultImg">
+        </h1>
+        <!-- 相手の手 -->
+        <div class="enemyHand">
+            <img :src="enemyHandImg">
+            {{ enemyHand }}
+        </div>
+
+        <!-- 自分の手 -->
+        <button v-on:click="fight('goo')">グー✊</button>
+        <button v-on:click="fight('choki')">チョキ✌️</button>
+        <button v-on:click="fight('paa')">パー🖐</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/janken.js"></script>
+</body>
+</html>
